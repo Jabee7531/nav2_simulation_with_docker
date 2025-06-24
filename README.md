@@ -156,7 +156,7 @@ ros2 param set /cmd_vel_example linear_scale 0.8
 ros2 param set /cmd_vel_example angular_scale 1.5
 ```
 
-#### Ros2 cmd_vel_example 패키지 실행
+#### Ros2 scan_example 패키지 실행
 ```
 source /nav2_simulation_with_docker/install/local_setup.bash
 ros2 run examples scan_example
