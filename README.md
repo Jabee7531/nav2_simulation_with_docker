@@ -143,7 +143,7 @@ cd /nav2_simulation_with_docker
 colcon build --symlink-install
 ```
 
-#### Ros2 cmd_vel_example 패키지 실행
+#### Ros2 cmd_vel_example 실행
 ```
 source /nav2_simulation_with_docker/install/local_setup.bash
 ros2 run examples cmd_vel_example
@@ -156,7 +156,7 @@ ros2 param set /cmd_vel_example linear_scale 0.8
 ros2 param set /cmd_vel_example angular_scale 1.5
 ```
 
-#### Ros2 scan_example 패키지 실행
+#### Ros2 scan_example 실행
 ```
 source /nav2_simulation_with_docker/install/local_setup.bash
 ros2 run examples scan_example
@@ -167,7 +167,7 @@ ros2 param get /scan_example obstacle_detect_range
 ros2 param set /scan_example obstacle_detect_range 0.7
 ```
 
-#### Ros2 image_example 패키지 실행
+#### Ros2 image_example 실행
 ```
 source /nav2_simulation_with_docker/install/local_setup.bash
 ros2 run examples image_example
@@ -195,3 +195,15 @@ entry_points={
 },
 ```
 
+#### Ros2 examples 패키지 빌드
+```
+cd /nav2_simulation_with_docker
+
+colcon build --symlink-install --packages-select new_packages
+```
+
+#### Ros2 new_packages 패키지 실행
+```
+source /nav2_simulation_with_docker/install/local_setup.bash
+ros2 run examples new_example_node
+```
