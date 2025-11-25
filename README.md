@@ -74,6 +74,12 @@ or
 docker kill updated_tb3
 ```
 
+#### Docker 프로세스 재시작
+```
+# 종료
+docker restart tb3
+```
+
 #### Docker 프로세스 삭제
 ```
 docker rm tb3
