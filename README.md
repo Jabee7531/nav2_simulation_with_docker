@@ -213,3 +213,30 @@ colcon build --symlink-install --packages-select new_packages
 source /nav2_simulation_with_docker/install/local_setup.bash
 ros2 run examples new_example_node
 ```
+
+## 스토리지 실습
+
+#### 로봇 Bringup
+```
+ros2 launch storagy bringup.launch.py
+```
+
+#### 맵핑
+```
+ros2 param set /amcl tf_broadcast false
+
+ros2 launch storagy cartographer.launch.py
+
+ros2 run teleop_twist_keyboard teleop_twist_keyboard
+```
+
+#### 맵 저장
+```
+mkdir ~/maps
+ros2 run nav2_map_server map_saver_cli -t /slam/map --free 0.196 -f /home/storagy/maps/my_first_map
+```
+
+#### 맵 로드
+```
+ros2 service call /map_server/load_map nav2_msgs/srv/LoadMap "{map_url : /home/storagy/maps/my_first_map.yaml}"
+```
