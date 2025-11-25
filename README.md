@@ -221,6 +221,11 @@ ros2 run examples new_example_node
 ros2 launch storagy bringup.launch.py
 ```
 
+#### 로봇 Rviz2
+```
+ros2 launch storagy rviz2.launch.py
+```
+
 #### 맵핑
 ```
 ros2 param set /amcl tf_broadcast false
